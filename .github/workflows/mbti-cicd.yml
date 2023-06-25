@@ -41,7 +41,7 @@ jobs:
       with:
         registry: ${{ secrets.NCP_CONTAINER_REGISTRY }}
         username: ${{ secrets.NCP_ACCESS_KEY }}
-        password: ${{ secrets.niniz }}
+        password: ${{ secrets.NCP_SECRET_KEY }}
     - name: build and push
       uses: docker/build-push-action@v3
       with:
