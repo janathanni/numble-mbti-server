@@ -10,7 +10,7 @@ jobs:
   build_dockerpush:
     runs-on: ubuntu-latest
     env :
-      APPLICATION: ${{ secrets.APPLICATION }}
+      APPLICATION: secrets
     steps:
     - name: Checkout
       uses: actions/checkout@v3
