@@ -2,9 +2,9 @@ name: mbti-server CI/CD with Gradle
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "dev" ]
+    branches: [ "main" ]
 
 jobs:
   build_dockerpush:
@@ -23,8 +23,8 @@ jobs:
     - name: make application.properties
       if: true 
       run: |
-       touch ./src/main/resources/application.properties
-       echo "${{ secrets.APPLICATION }}" > ./src/main/resources/application.properties
+       touch ./src/main/resources/application.yml
+       echo "${{ secrets.APPLICATION }}" > ./src/main/resources/application.yml
     
     - name: Build with Gradle
       run: | 
